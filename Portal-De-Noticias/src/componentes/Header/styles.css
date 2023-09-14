@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  /* justify-content: space-evenly; */
+  margin: 0 auto;
+  
+  height: 211px;
+  width: 100%;
+  max-width: 1773px;
+
+  background: rgba(14, 14, 14, 0.85);
+}
+
+img .logo {
+  width: 256px;
+  height: 211px;
+}
+
+.title {
+  display: grid;
+  place-items: center;
+  flex: 1;
+}
+
+.title h1 {
+  color: #FFF;
+  font-family: Poller One;
+  font-size: 86px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 17.442% */
+  letter-spacing: 1.6px;
+  text-align: center;
+}
