@@ -1,0 +1,32 @@
+.search {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1336px;
+  height: 67px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  
+  display: flex;
+  align-items: center;
+}
+
+.search button {
+  background: none;
+  border: none;
+
+  margin: 0 35px;
+
+  color: var(--Text);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.search-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: 30px;
+}

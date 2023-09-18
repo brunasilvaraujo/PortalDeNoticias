@@ -1,3 +1,8 @@
-/* div {
-  width: 100vh;
-} */
+:root {
+    --Main-Red:  #C31815;
+    --Text: #2A2A2A;
+  }
+
+body {
+  background-color: #F1F2F3;
+}

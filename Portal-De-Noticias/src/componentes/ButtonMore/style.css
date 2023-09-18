@@ -1,0 +1,29 @@
+section {
+    display: flex;
+    align-items: center;
+}
+
+.more-notice {
+    margin: 50px auto 107px;
+  
+    width: 220px;
+    height: 60px;
+    
+    border-radius: 2px;
+    border: 1px solid #C31815;
+    opacity: 0.28;
+  
+    color: var(--Main-Red);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 107.143% */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+
+.more-notice:hover {
+  opacity: 100%;
+}

@@ -1,0 +1,70 @@
+.notices-cards {
+  display: flex;
+}
+
+.card {
+  display: grid;
+  justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  max-width: 1336px;
+  width: 438px;
+  height: 331px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+}
+
+.title-card {
+  padding: 20px 30px;
+
+  color: var(--Text);
+
+  font-family: IBM Plex Serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;    
+}
+
+.notice-card {
+  padding: 20px 30px;
+
+  color: var(--Text);
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;  
+}
+
+.card .heart-card {
+  display: block;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-top: 15px;
+}
+
+.btn-card {
+  width: 167px;
+  height: 36px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  border-radius: 5px;
+  background: #05D465;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.footer-notice-card {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
