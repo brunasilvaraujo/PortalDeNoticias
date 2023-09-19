@@ -70,12 +70,21 @@
 }
 
 .btn-notice {
+  text-decoration: none;
+
   width: 167px;
   height: 36px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
+  padding: 7px;
+  text-align: center;
   gap: 10px;
+
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 165%;
 
   border-radius: 5px;
   background: #05D465;
@@ -85,4 +94,5 @@
 .footer-notice {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
 }
