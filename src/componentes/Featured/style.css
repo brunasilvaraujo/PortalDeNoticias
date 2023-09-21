@@ -39,6 +39,10 @@
   height: 16px;
 }
 
+.btn-heart {
+  border: none;
+}
+
 .title-notice-new {
   color: var(--Text);
 
@@ -89,6 +93,19 @@
   border-radius: 5px;
   background: #05D465;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.loading {
+  margin-top: 40px;
+  color: var(--Main-Red);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px; /* 107.143% */
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
 
 .footer-notice {

@@ -1,24 +1,48 @@
-import React from 'react';
+import { useContext } from 'react';
+import NoticeContext from '../../context/NoticesContext';
+import FavoriteButton from '../FavoriteButton';
+
 import './style.css';
-import { imagens } from '../../images/path';
+
 
 function CardNotice() {
+  const { data, page } = useContext(NoticeContext);
+
+  if (!data.length) {
     return (
-      <>
-        <div className='notices-cards'>
-          <div className='card'>
-              <h2 className='title-card'>Titulo da Noticia</h2>
-              <p className='notice-card'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel labore nisi, molestiae, et eius aliquam aliquid ad sed, reprehenderit exercitationem non voluptatem atque? Perspiciatis natus amet officia vel fugit!</p>
+      <p className='loading'>Carregando...</p>
+    )
+  } 
+
+  const dateCurrent = new Date();
+  
+  const dateCurrentFormat = new Date(`${dateCurrent.getMonth() + 1}/${dateCurrent.getDate()}/${dateCurrent.getFullYear()}`);
+  const datesPubli = data.map((date) => date.data_publicacao.split(" ")[0].split("/"));
+  
+  const datesFormat = datesPubli.map((datePubli) => new Date(`${datePubli[1]}/${datePubli[0]}/${datePubli[2]}`));
+
+  const resultDate = datesFormat.map((dateFormat) => (dateCurrentFormat.getTime() - dateFormat.getTime()) / (1000 * 3600 * 24));
+  
+  
+  return (
+    <>
+      <div className='notices-cards' >
+        {data.slice(0, (9 * page)).map((feature, index) => {
+          return (
+            <div className='card' key={index}>
+              <h2 className='title-card'>{feature.titulo}</h2>
+              <p className='notice-card'>{feature.introducao}</p>
               <div className='footer-notice-card'>
-              <p className='date-card'>2 dias atrás</p>
-              <button className='btn-card'>Leia a noticia aqui</button>  
+                <p className='date-card'>{resultDate[index]+ ' ' + 'dias atrás'}</p>
+                <a href={feature.link} className='btn-card'>Leia a noticia aqui</a>
               </div>
-              <img className='heart-card' src={ imagens.favoreited} alt="Botão de Favorito" />
-          </div>
-           
-        </div>
-      </>
-    );
+              <FavoriteButton id={String(feature.id)} />
+            </div>
+          )
+        })}
+      </div>
+    </>
+  );
 }
 
 export default CardNotice;

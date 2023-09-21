@@ -8,18 +8,29 @@ type NoticesProviderProps = {
   };
 
 function NoticesProvider({children}: NoticesProviderProps ) {
-  const [dataNotices, setDataNotices] = useState<NoticesType[]>([]);
-  
+  const [data, setData] = useState<NoticesType[]>([]);
+  const [page, setPage] = useState<number>(1);
+  const [favorites, setFavorites] = useState<string[]>([]);
+
+  const dataApi = async () => {
+    const resultFetch = await fetchApi(`https://servicodados.ibge.gov.br/api/v3/noticias/`);
+    setData(resultFetch.items);
+  };
+   
   useEffect(() => {
-    const dataFetch = async () => {
-      const resultFetch = await fetchApi();
-      setDataNotices(resultFetch.items);
-    };
-    dataFetch();
-  }, []);
+    dataApi();
+  }, [page]);
 
   return (
-    <NoticesContext.Provider value={ { dataNotices: dataNotices } }>
+    <NoticesContext.Provider value={{
+      data,
+      setData,
+      page,
+      setPage,
+      dataApi,
+      favorites,
+      setFavorites
+    }}>
       { children }
     </NoticesContext.Provider>
   );

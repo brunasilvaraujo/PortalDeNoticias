@@ -1,18 +1,28 @@
 import React, { useContext } from 'react'
 import NoticeContext from '../../context/NoticesContext';
-import { imagens as image } from '../../images/path';
+import FavoriteButton from '../FavoriteButton';
 import './style.css';
 
 function Featured() {
-  const { dataNotices } = useContext(NoticeContext);
+  const { data } = useContext(NoticeContext);
 
-  if (!dataNotices.length) {
+  if (!data.length) {
     return (
-      <p>Carregando...</p>
+      <p className='loading'>Carregando...</p>
     )
   }
 
-  const { data_publicacao, imagens, titulo, introducao, link  } = dataNotices[0];
+  const { data_publicacao, imagens, titulo, introducao, link, id } = data[0];
+  
+  const dateCurrent = new Date();
+  
+  const dateCurrentFormat = new Date(`${dateCurrent.getMonth() + 1}/${dateCurrent.getDate()}/${dateCurrent.getFullYear()}`);
+
+  const datesPubli = data_publicacao.split(" ")[0].split("/");
+
+  const dataFormat = new Date(`${datesPubli[1]}/${datesPubli[0]}/${datesPubli[2]}`);
+
+  const resultDate = (dateCurrentFormat.getTime() - dataFormat.getTime()) / (1000 * 3600 * 24);
 
   return (
     <div className='feature'>
@@ -20,13 +30,15 @@ function Featured() {
       <div className='feature-notice'>
         <div className='header-notice'>
           <h3 className='title-notice'>Notícias mais recente</h3>
-          <img className='heart' src={image.favorite} alt="Botão de Favorito" />
+          <button className='btn-heart'>
+            <FavoriteButton id={String(id)} />
+          </button>
         </div>
         <h2 className='title-notice-new'>{ titulo }</h2>
         <p className='notice'>{ introducao }</p>
         <div className='footer-notice'>
-          <p className='date-notice'>{data_publicacao}</p>
-          <a href={ link } className='btn-notice' type="submit">Leia a notícia aqui</a>
+          <p className='date-notice'>{resultDate + ' ' + 'dias atrás'}</p>
+          <a href={ link } className='btn-notice'>Leia a notícia aqui</a>
         </div>
       </div>
     </div>
