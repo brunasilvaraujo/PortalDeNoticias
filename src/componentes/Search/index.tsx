@@ -1,4 +1,3 @@
-
 import CardNotice from '../CardNotice';
 import ButtonMore from '../ButtonMore';
 

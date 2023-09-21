@@ -1,4 +1,3 @@
-import React from 'react'
 import { imagens } from '../../images/path';
 import './styles.css';
 

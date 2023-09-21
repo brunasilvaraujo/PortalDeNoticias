@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { imagens } from '../../images/path';
 import NoticeContext from '../../context/NoticesContext';
 

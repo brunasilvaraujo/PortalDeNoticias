@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import NoticeContext from '../../context/NoticesContext';
 import FavoriteButton from '../FavoriteButton';
 import './style.css';
