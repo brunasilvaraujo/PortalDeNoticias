@@ -43,4 +43,6 @@ Mostra notícias recentes relacionadas aos municípios selecionados.
 4. Favoritos
 Os usuários podem adicionar notícias aos favoritos para visualizá-las posteriormente.
 
-## 
+## Deploy da Aplicação
+
+[Deploy](https://portal-de-noticias-mat7ejzu3-brunasilvaraujo.vercel.app/)
