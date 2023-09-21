@@ -45,4 +45,4 @@ Os usuários podem adicionar notícias aos favoritos para visualizá-las posteri
 
 ## Deploy da Aplicação
 
-[Deploy](https://portal-de-noticias-7dxvfs8pv-brunasilvaraujo.vercel.app/)
+[Deploy](https://portal-de-noticias-git-main-brunasilvaraujo.vercel.app/)
