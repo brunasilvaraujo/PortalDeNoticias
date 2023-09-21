@@ -1,26 +1,29 @@
 .feature {
   display: flex;
 
-  margin: 150px auto;
+  margin: 90px auto;
   
-  height: 485px;
-  width: 100%;
-  max-width: 1336px;
+  max-width: 1100px;
 }
 
 .feature-notice {
   display: grid;
   justify-content: space-evenly;
   flex: 1;
-  padding-bottom: 80px;
-  padding-left: 60px;
+  padding-bottom: 40px;
+  padding-left: 30px;
   padding-right: 15px;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .header-notice {
   display: flex;
   justify-content: space-between;
+}
+
+.img-featured {
+  width: 554px;
+  height: 384px;
 }
 
 .title-notice {
@@ -30,7 +33,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 210%; /* 29.4px */
+  line-height: 190%; /* 29.4px */
   letter-spacing: 0.28px;
 }
 
@@ -57,10 +60,10 @@
   color: var(--Text);
 
   font-family: Poppins;
-  font-size: 15px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 165%;
+  line-height: normal;
 }
 
 .date-notice {
@@ -76,19 +79,18 @@
 .btn-notice {
   text-decoration: none;
 
-  width: 167px;
+  width: 150px;
   height: 36px;
   padding: 7px;
   text-align: center;
-  gap: 10px;
 
   color: #000;
   text-align: center;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 165%;
+  line-height: 167%;
 
   border-radius: 5px;
   background: #05D465;
@@ -111,5 +113,5 @@
 .footer-notice {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 15px;
 }
